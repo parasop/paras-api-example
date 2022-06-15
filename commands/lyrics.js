@@ -1,5 +1,7 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
+const { MessageEmbed,Util } = require("discord.js")
+const {Base}=require("paras-api-wrapper");
+const api = new Base()
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -14,11 +16,10 @@ module.exports = {
     run: async (client,interaction) => {
         const args = interaction.options.getString("song");
         console.log(client.api)
-        let lyrics = await client.api.lyrics(args);
+        let lyrics = await api.lyrics(args);
        
-        console.log(lyrics)
         let embed = new MessageEmbed()
-        .setTitle(`${lyrics.title} - ${Lyrics.artist}`)
+        .setTitle(`${lyrics.title} - ${lyrics.artist}`)
             const Embed= Util.splitMessage(lyrics.lyrics,{
                         maxLength:2048,
                         char:"\n",
