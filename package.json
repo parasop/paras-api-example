@@ -1,0 +1,26 @@
+{
+  "name": "paras-api-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parasop/paras-api-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parasop/paras-api-example/issues"
+  },
+  "homepage": "https://github.com/parasop/paras-api-example#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.15.0",
+    "discord.js": "^13.8.0",
+    "dotenv": "^16.0.1",
+    "fs": "^0.0.1-security",
+    "paras-api-wrapper": "^1.0.3"
+  }
+}
